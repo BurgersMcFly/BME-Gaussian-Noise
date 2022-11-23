@@ -9,7 +9,7 @@ var = 50
 sigma = var ** 0.5
 gaussian = np.random.normal(mean, sigma, (720, 1280))
 
-#Directory containing the images. Can replace "jpg" with whatever format your images are.
+#Directory containing the images. Can replace "jpg" with whatever format your images are in.
 path = "testimgs/*jpg"
 
 #noise
