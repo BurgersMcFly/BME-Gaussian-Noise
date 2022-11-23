@@ -1,9 +1,9 @@
-#add noise to dataset
 import numpy as np
 import cv2
 import glob 
 import os
 
+#noise properties
 mean = 0
 var = 50
 sigma = var ** 0.5
@@ -15,7 +15,7 @@ path = "testimgs/*jpg"
 #Create a folder for the noisy images to be saved in
 os.mkdir("testimgs/Noise1")
 
-#noise
+#add noise
 for image in glob.glob('testimgs/*.jpg'):
     img = cv2.imread(image)
     noisy_image = np.zeros(img.shape, np.float32)
