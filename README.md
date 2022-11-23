@@ -6,8 +6,8 @@ Main file is called "noise.py".
 
 If you want to quickly test it out without saving the images use "noise_plot_example".
 
-|  |  |  |
-|--|--|--|
+| var = 50 | var = 50 | var = 999 |
+:--:|:--:|:--:|
 ![](https://i.imgur.com/uQoSC8Y.png)| ![](https://i.imgur.com/NlR15n1.png)| ![](https://i.imgur.com/FxOXaZe.png)
 
 # Modules used
