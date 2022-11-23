@@ -1,8 +1,8 @@
-#add noise to dataset
+#add noise and plot
 import numpy as np
 import cv2
-import glob 
-import os
+import glob
+import matplotlib.pyplot as plt
 
 mean = 0
 var = 50
@@ -11,9 +11,6 @@ gaussian = np.random.normal(mean, sigma, (720, 1280))
 
 #Directory containing the images. Can replace "jpg" with whatever format your images are.
 path = "testimgs/*jpg"
-
-#Create a folder for the noisy images to be saved in
-os.mkdir("testimgs/Noise1")
 
 #noise
 for image in glob.glob('testimgs/*.jpg'):
@@ -30,6 +27,11 @@ for image in glob.glob('testimgs/*.jpg'):
         cv2.normalize(noisy_image, noisy_image, 0, 255, cv2.NORM_MINMAX, dtype=-1)
         noisy_image = noisy_image.astype(np.uint8)
 
-#Save noisy images
-        basename = os.path.splitext(os.path.basename(image))[0]
-        cv2.imwrite(os.path.join('testimgs/Noise1',f'{basename}.jpg'), noisy_image)
+#plot images
+        plt.subplot(211)
+        plt.title("Input image")
+        plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        plt.subplot(212)
+        plt.title("Image with added noise")
+        plt.imshow(cv2.cvtColor(noisy_image, cv2.COLOR_BGR2RGB))
+        plt.show()
