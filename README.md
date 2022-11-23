@@ -6,9 +6,9 @@ Main file is called "noise.py".
 
 If you want to quickly test it out without saving the images use "noise_plot_example".
 
-![](https://i.imgur.com/d4VwCtf.png)
-
-![](https://i.imgur.com/uaa1mco.png)
+|  |  |
+|--|--|
+![](https://i.imgur.com/d4VwCtf.png)| ![](https://i.imgur.com/uaa1mco.png)
 
 # Modules used
 
