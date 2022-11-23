@@ -1,9 +1,9 @@
-#add noise and plot
 import numpy as np
 import cv2
 import glob
 import matplotlib.pyplot as plt
 
+#noise properties
 mean = 0
 var = 50
 sigma = var ** 0.5
@@ -12,7 +12,7 @@ gaussian = np.random.normal(mean, sigma, (1728, 3072))
 #Directory containing the images. Can replace "jpg" with whatever format your images are in.
 path = "testimgs/*jpg"
 
-#noise
+#add noise
 for image in glob.glob('testimgs/*.jpg'):
     img = cv2.imread(image)
     noisy_image = np.zeros(img.shape, np.float32)
